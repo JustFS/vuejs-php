@@ -2,6 +2,10 @@
   font-family: "font-1";
   src: url(fonts/SourceSansPro-Bold.ttf);
 }
+@font-face {
+  font-family: "font-2";
+  src: url(fonts/SourceSansPro-Ligth.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -16,13 +20,13 @@ a, a:visited {
 
 input, select {
   outline: none;
-  background: #88002D;
+  background: #B01735;
   border: none;
 }
 
 body {
   font-family: "font-1", sans-serif;
-  background: #88002D;
+  background: #B01735;
   color: #eee;
 }
 
@@ -70,9 +74,10 @@ i {
   width: 90%;
   margin: 0 auto 0;
   position: relative;
+  color: #3E0018;
 }
 .lobby-container ul li {
-  background: #885C7E;
+  background: #EAE0DA;
   padding: 10px 18px;
   width: 70px;
   text-align: center;
@@ -124,7 +129,7 @@ i {
   animation: animInput2 0.4s ease forwards;
   transform: scaleX(0);
   transform-origin: left;
-  background: #88002D;
+  background: #B01735;
   border: none;
   outline: none;
   z-index: 2;
@@ -144,7 +149,7 @@ i {
   align-items: center;
   right: 0;
   width: 90%;
-  background: #88002D;
+  background: #B01735;
   transform-origin: right;
   transform: scaleX(0);
   animation: animInput 0.5s ease forwards;
@@ -184,6 +189,7 @@ i {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
+  color: #EAE0DA;
 }
 .lobby-container h3 {
   position: absolute;
@@ -202,7 +208,7 @@ i {
   }
 }
 .lobby-container .list-container .wine-card {
-  background: #885C7E;
+  background: #EAE0DA;
   border-radius: 25px;
   padding: 20px;
   overflow: hidden;
@@ -245,6 +251,7 @@ i {
   padding: 0;
   z-index: 20;
   font-size: 1.8rem;
+  color: #eee;
 }
 @media screen and (max-width: 550px) {
   .lobby-container .list-container .wine-card .card-header h2 {
@@ -279,9 +286,10 @@ i {
 }
 .lobby-container .list-container .container .text-container .location {
   margin: 20px 0 20px;
+  color: #3E0018;
 }
 .lobby-container .list-container .container .text-container .location i {
-  color: #3E0018;
+  color: #B01735;
   font-size: 1.4rem;
   margin-right: 6px;
 }
@@ -290,11 +298,13 @@ i {
 }
 .lobby-container .list-container .container .text-container p {
   font-weight: 100;
-  text-align: justify;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 7;
   overflow: hidden;
+  color: #3E0018;
+  font-family: "font-2", sans-serif;
+  line-height: 24px;
 }
 @media screen and (max-width: 550px) {
   .lobby-container .list-container .container .text-container p {
@@ -312,327 +322,6 @@ i {
   }
 }
 
-.item-anim-enter-active, .item-anim-leave-active {
-  opacity: 1;
-  transition: 0.8s;
-}
-.item-anim-enter, .item-anim-leave-to {
-  opacity: 0;
-  transition: 0.1s;
-}
-
-.admin-nav h1 {
-  text-align: center;
-  margin: 40px auto 0;
-  background: #3E0018;
-  border-radius: 25px;
-  max-width: 300px;
-  padding: 5px 0;
-  box-shadow: 0 0 3px #333;
-}
-
-.admin-container {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-.admin-container .login-container {
-  background: #3E0018;
-  border-radius: 30px;
-  box-shadow: 1px 0 5px rgba(51, 51, 51, 0.267);
-  padding: 12px;
-  margin: 45px 12px 12px;
-}
-.admin-container .login-container h2 {
-  text-align: center;
-  width: 100%;
-  margin: 20px 0;
-}
-.admin-container .login-container input {
-  margin-bottom: 25px;
-}
-.admin-container .login-container input[type=submit] {
-  background: #885C7E;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: #eee;
-  font-size: 1.3rem;
-  border: none;
-  outline: none;
-  margin: 20px auto 20px;
-  transition: 0.2s;
-}
-.admin-container .login-container input[type=submit]:hover {
-  background: #88002D;
-}
-.admin-container h2 {
-  margin: 40px auto 10px;
-  max-width: 700px;
-  padding-left: 45px;
-}
-.admin-container .wine-card {
-  background: #3E0018;
-  padding: 12px;
-  margin: 25px auto 12px;
-  border-radius: 25px;
-  box-shadow: 1px 0 4px rgba(51, 51, 51, 0.239);
-  max-width: 700px;
-}
-.admin-container .wine-card .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0px 20px;
-  padding: 0 20px;
-}
-.admin-container .wine-card .header h3 {
-  font-size: 2rem;
-  width: 80%;
-}
-.admin-container .wine-card .header i {
-  font-size: 1.5rem;
-}
-.admin-container .wine-card .container {
-  display: grid;
-  grid-template-columns: 72% 28%;
-}
-.admin-container .wine-card .container .buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.admin-container .wine-card .container .buttons h4 {
-  background: #88002D;
-  border-radius: 15px;
-  padding: 4px 8px;
-}
-.admin-container .wine-card .container p {
-  margin-top: 20px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 12;
-  overflow: hidden;
-  margin-right: 10px;
-}
-@media screen and (max-width: 600px) {
-  .admin-container .wine-card .container p {
-    -webkit-line-clamp: 9;
-  }
-}
-.admin-container .wine-card .container img {
-  margin: 0 auto;
-}
-
-.create-container {
-  background: #3E0018;
-  border-radius: 20px;
-  box-shadow: 1px 0 4px rgba(51, 51, 51, 0.192);
-  padding: 12px;
-  margin: 12px auto;
-  max-width: 850px;
-}
-.create-container h1 {
-  text-align: center;
-}
-.create-container input,
-.create-container textarea,
-.create-container select {
-  margin: 8px 0 16px;
-  border-radius: 10px;
-  background-color: #eee;
-  padding: 9px;
-  font-family: "font-1", sans-serif;
-  width: 100%;
-  font-size: 1rem;
-  resize: none;
-}
-.create-container form {
-  margin: 10px 0;
-}
-.create-container form .create-btn {
-  margin: 0 auto;
-  text-align: center;
-  max-width: 320px;
-}
-.create-container form .create-btn input[type=submit] {
-  background-color: #885C7E;
-  color: #eee;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.create-container form .create-btn input[type=submit]:hover {
-  background: #88002D;
-}
-
-.update-container {
-  padding: 10px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.update-container input,
-.update-container textarea,
-.update-container select {
-  margin: 8px 0 16px;
-  border-radius: 10px;
-  background-color: #eee;
-  padding: 9px;
-  font-family: "font-1", sans-serif;
-  width: 100%;
-  font-size: 1rem;
-}
-.update-container h1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.update-container .update-search {
-  background: #885C7E;
-  border-radius: 20px;
-  padding: 12px 12px 3px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.update-container .update-search input,
-.update-container .update-search select {
-  margin: 3px 0 12px;
-}
-.update-container .update-search input[type=submit] {
-  cursor: pointer;
-  transition: 0.2s;
-}
-.update-container .update-search input[type=submit]:hover {
-  background: #3E0018;
-  color: #eee;
-}
-.update-container .update-list {
-  margin: 24px 0px;
-  background: #3E0018;
-  border-radius: 30px;
-  padding: 12px;
-}
-.update-container .update-list .header {
-  display: grid;
-  grid-template-columns: 65% 35%;
-  border-bottom: 4px solid #885C7E;
-  margin-bottom: 15px;
-  padding-bottom: 8px;
-  font-size: 1.4rem;
-}
-.update-container .update-list .wine {
-  display: grid;
-  grid-template-columns: 65% 22% 6% 1% 6%;
-  position: relative;
-}
-.update-container .update-list .wine h2 {
-  font-size: 0.9rem;
-}
-@media screen and (min-width: 650px) {
-  .update-container .update-list .wine h2 {
-    font-size: 1.1rem;
-  }
-}
-.update-container .update-list .wine input[type=checkbox] {
-  width: 35px;
-  height: 35px;
-  transform: translate(-30px, -16px);
-  opacity: 0;
-  cursor: pointer;
-}
-@media screen and (min-width: 442px) {
-  .update-container .update-list .wine input[type=checkbox] {
-    transform: translate(-40px, -16px);
-  }
-}
-@media screen and (min-width: 740px) {
-  .update-container .update-list .wine input[type=checkbox] {
-    transform: translate(-56px, -16px);
-  }
-}
-@media screen and (min-width: 1050px) {
-  .update-container .update-list .wine input[type=checkbox] {
-    transform: translate(-70px, -16px);
-  }
-}
-.update-container .update-list .wine .fa-pen {
-  transform: translateY(2px);
-}
-.update-container .update-list .update-checkbox:checked ~ .update {
-  visibility: visible;
-  position: unset;
-  opacity: 1;
-  transform: scaleY(1);
-}
-.update-container .update-list .update {
-  visibility: hidden;
-  position: fixed;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: 0.3s ease;
-  transform-origin: top;
-  background: #885C7E;
-  padding: 12px;
-  border-radius: 25px;
-  margin-bottom: 35px;
-}
-.update-container .update-list .update h2 {
-  text-align: center;
-  margin: 10px 0;
-  background: #3E0018;
-  border-radius: 35px;
-  padding: 12px 0;
-}
-.update-container .update-list .update .submit-btn {
-  margin: 0 auto;
-  text-align: center;
-}
-.update-container .update-list .update input,
-.update-container .update-list .update select {
-  color: #6d6b6b;
-}
-.update-container .update-list .update input[type=submit] {
-  background: #3E0018;
-  color: #eee;
-  max-width: 290px;
-}
-
-#modalDelete {
-  opacity: 0;
-  transform: scaleY(0);
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s;
-  background: #885C7E;
-  padding: 30px 30px;
-  border-radius: 30px;
-  z-index: 100;
-  box-shadow: 0 4px 20px rgba(51, 51, 51, 0.561);
-}
-#modalDelete:target {
-  opacity: 1;
-  visibility: visible;
-  position: fixed;
-  transform: scaleY(1) translate(-50%, -50%);
-}
-#modalDelete .button-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 15px 0 0;
-  padding: 0 40px;
-}
-#modalDelete .button-container a {
-  background: #88002D;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: 0.2s;
-}
-#modalDelete .button-container a:hover {
-  background: #3E0018;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -648,131 +337,10 @@ nav img {
 nav ul {
   position: relative;
 }
-nav ul i {
-  font-size: 3.2rem;
-  margin-right: 20px;
-}
-nav #toggle {
-  position: absolute;
-  right: 20px;
-  width: 65px;
-  height: 50px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 2;
-}
-nav #toggle:hover ~ .hamburger {
-  transform: scale(1.1);
-}
-nav .hamburger {
-  margin: -5px 20px 0 0;
-  transition: 0.5s;
-}
-nav .hamburger span {
-  width: 60px;
-  height: 6px;
-  border-radius: 5px;
-  background: #eee;
-  display: block;
-  margin-top: 10px;
-  transition: 0.5s ease;
-}
-nav #toggle:checked ~ .hamburger {
-  position: relative;
-}
-nav #toggle:checked ~ .hamburger span {
-  position: absolute;
-  top: 16px;
-  right: 0px;
-}
-nav #toggle:checked ~ .hamburger span:nth-child(1) {
-  transform: rotate(45deg);
-}
-nav #toggle:checked ~ .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-nav #toggle:checked ~ .hamburger span:nth-child(3) {
-  transform: rotate(-45deg);
-}
-nav .hamburger-menu {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.2s;
+nav ul .fas {
   font-size: 2rem;
-  width: 100%;
-  top: 75px;
-  cursor: pointer;
-  z-index: 4;
-  line-height: 100px;
-}
-nav .hamburger-menu li {
-  text-align: center;
-  margin: 0 auto;
-  text-transform: uppercase;
-  transition: 0.3s ease;
-  background: #88002D;
-  width: 100%;
-}
-nav .hamburger-menu li:hover {
-  background: #3E0018;
-}
-nav .hamburger-menu li:nth-child(1) {
-  transform: translateY(0);
-  transition: 0.6s ease;
-  border-radius: 0 0 40px 40px;
-  box-shadow: 0 20px 10px rgba(51, 51, 51, 0.3);
-}
-nav .hamburger-menu li:nth-child(2) {
-  transform: translateY(-132px);
-  transition: 0.3s ease;
-}
-nav .hamburger-menu li:nth-child(1):before {
-  content: "";
-  background: #eee;
-  height: 1px;
-  width: 85%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-}
-nav .hamburger-menu a {
-  display: inline-block;
-  width: 100%;
-}
-nav #toggle:checked ~ .hamburger-menu {
-  visibility: visible;
-  opacity: 1;
-}
-nav #toggle:checked ~ .hamburger-menu li:nth-child(1) {
-  transform: translateY(90px);
-}
-nav #toggle:checked ~ .hamburger-menu li:nth-child(2) {
-  transform: translateY(-110px);
-}
-
-.admin-nav {
-  margin: 30px 0;
-}
-.admin-nav h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-.admin-nav ul {
-  display: flex;
-  justify-content: space-between;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.admin-nav ul li {
-  background: #885C7E;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 40px;
-  box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
-  cursor: pointer;
+  margin: 18px 25px 0 0;
+  color: #EAE0DA;
 }
 
 /*# sourceMappingURL=index.css.map */

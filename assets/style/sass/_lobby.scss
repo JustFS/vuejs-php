@@ -36,6 +36,7 @@
     width: 90%;
     margin: 0 auto 0;
     position: relative;
+    color: $color-1;
 
     li {
       background: $color-3;
@@ -161,6 +162,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
+    color: $color-3;
   }
   h3 {
     position: absolute;
@@ -223,6 +225,7 @@
           padding: 0;
           z-index: 20;
           font-size: 1.8rem;
+          color: $white;
 
           @media screen and (max-width: 550px) {
             font-size: 1.3rem;
@@ -260,9 +263,10 @@
         }
         .location {
           margin: 20px 0 20px;
+          color: $color-1;
 
           i {
-            color: $color-1;
+            color: $color-2;
             font-size: 1.4rem;
             margin-right: 6px;
           }
@@ -272,11 +276,14 @@
         }
         p {
           font-weight: 100;
-          text-align: justify;
+
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 8;
+          -webkit-line-clamp: 7;
           overflow: hidden;
+          color: $color-1;
+          font-family: $font-2;
+          line-height: 24px;
 
           @media screen and (max-width: 550px) {
             -webkit-line-clamp: 4;
@@ -293,17 +300,5 @@
         }
       }
     }
-  }
-}
-.item-anim {
-  &-enter-active,
-  &-leave-active {
-    opacity: 1;
-    transition: 0.8s;
-  }
-  &-enter,
-  &-leave-to {
-    opacity: 0;
-    transition: 0.1s;
   }
 }

@@ -1,29 +1,21 @@
 {
-  "name": "php-my-cave",
+  "name": "vuejs-php",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "dependencies": {
-    "mysql": "^2.18.1",
-    "node-sass": "^4.14.1"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./assets/style/index.scss:./assets/style/index.css",
-    "start": "browser-sync start --proxy localhost/php-my-cave  --files '**/*' --no-notify"
+    "start": "browser-sync start --proxy localhost/vuejs-php-base  --files '**/*' --no-notify"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JustFS/php-my-cave.git"
+    "url": "git+https://github.com/JustFS/vuejs-php.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JustFS/php-my-cave/issues"
+    "url": "https://github.com/JustFS/vuejs-php/issues"
   },
-  "homepage": "https://github.com/JustFS/php-my-cave#readme"
+  "homepage": "https://github.com/JustFS/vuejs-php#readme"
 }
