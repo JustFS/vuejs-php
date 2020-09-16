@@ -2,12 +2,17 @@
   font-family: "font-1";
   src: url(fonts/SourceSansPro-Bold.ttf);
 }
+@font-face {
+  font-family: "font-2";
+  src: url(fonts/SourceSansPro-Ligth.ttf);
+}
 
 $font-1: "font-1", sans-serif;
+$font-2: "font-2", sans-serif;
 
 $color-1: #3E0018;
-$color-2: #88002D;
-$color-3: #885C7E;
+$color-2: #B01735;
+$color-3: #EAE0DA;
 $white: #eee;
 $black: #111;
 

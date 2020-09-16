@@ -10,7 +10,7 @@ function getPDO(): PDO
 {
 
   $servername = 'localhost';
-  $dbname = 'my_cave';
+  $dbname = 'vuejs-php';
   $user = 'root';
   $pass = '';
 

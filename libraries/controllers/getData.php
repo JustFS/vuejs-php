@@ -1,9 +1,9 @@
 <?php
 
-require_once(dirname(__DIR__) . '/autoload.php');
+require_once(dirname(__DIR__) . '/models/Wines.php');
 
 
-$model = new \models\Wines();
+$model = new Wines();
 
 $sql = $model->list('');
 
