@@ -1,0 +1,29 @@
+{
+  "name": "php-my-cave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./assets/style/index.scss:./assets/style/index.css",
+    "start": "browser-sync start --proxy localhost/php-my-cave  --files '**/*' --no-notify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustFS/php-my-cave.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustFS/php-my-cave/issues"
+  },
+  "homepage": "https://github.com/JustFS/php-my-cave#readme"
+}

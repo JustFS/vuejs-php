@@ -1,0 +1,778 @@
+@font-face {
+  font-family: "font-1";
+  src: url(fonts/SourceSansPro-Bold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+a, a:visited {
+  color: #eee;
+  text-decoration: none;
+}
+
+input, select {
+  outline: none;
+  background: #88002D;
+  border: none;
+}
+
+body {
+  font-family: "font-1", sans-serif;
+  background: #88002D;
+  color: #eee;
+}
+
+#root {
+  transition: 0.3s;
+}
+
+i {
+  cursor: pointer;
+}
+
+.lobby-container {
+  background: #3E0018;
+  height: 100%;
+  min-height: 90vh;
+  border-radius: 56px 56px 20px 20px;
+  margin: 54px auto 20px;
+  padding-bottom: 20px;
+  max-width: 1150px;
+}
+.lobby-container .cancel {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #eee;
+  border-radius: 25px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.lobby-container .cancel i {
+  transform: translate(4px, 2px);
+  font-size: 0.8rem;
+}
+.lobby-container .cancel:hover {
+  background: #eee;
+  color: #3E0018;
+}
+.lobby-container ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  width: 90%;
+  margin: 0 auto 0;
+  position: relative;
+}
+.lobby-container ul li {
+  background: #885C7E;
+  padding: 10px 18px;
+  width: 70px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: -34px;
+  box-shadow: 0 0 4px #333;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.lobby-container ul .search,
+.lobby-container ul select,
+.lobby-container ul .radio-container {
+  border-radius: 40px;
+  height: 60px;
+  position: absolute;
+  top: 45px;
+  padding: 0 20px;
+  color: #3E0018;
+  max-width: 550px;
+}
+.lobby-container ul .name input {
+  left: 0px;
+  width: 90%;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animInput 0.5s ease forwards;
+  font-family: "font-1", sans-serif;
+}
+.lobby-container ul .name input::placeholder {
+  font-size: 1.3rem;
+  color: #3E0018;
+  transform: translateY(2px);
+}
+@keyframes animInput {
+  to {
+    transform: scaleX(1);
+  }
+}
+.lobby-container ul .name i {
+  transform: translateX(-2px);
+}
+.lobby-container ul .country i {
+  transform: translate(-1px, 1px);
+}
+.lobby-container ul .country select {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  animation: animInput2 0.4s ease forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #88002D;
+  border: none;
+  outline: none;
+  z-index: 2;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #3E0018;
+  font-family: "font-1", sans-serif;
+}
+@keyframes animInput2 {
+  to {
+    transform: scaleX(1) translateX(-50%);
+  }
+}
+.lobby-container ul .grapes .radio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+  width: 90%;
+  background: #88002D;
+  transform-origin: right;
+  transform: scaleX(0);
+  animation: animInput 0.5s ease forwards;
+}
+@media screen and (max-width: 650px) {
+  .lobby-container ul .grapes .radio-container {
+    width: 100%;
+  }
+}
+.lobby-container ul .grapes .radio-container .radio {
+  display: flex;
+  align-items: center;
+}
+.lobby-container ul .grapes .radio-container .radio label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: 1.05rem;
+}
+@media screen and (max-width: 650px) {
+  .lobby-container ul .grapes .radio-container .radio label {
+    font-size: 0.8rem;
+    margin-right: 1px;
+  }
+}
+.lobby-container ul .grapes .radio-container .radio input {
+  padding: 0 10px;
+  background: none;
+}
+.lobby-container .title {
+  position: absolute;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  left: 50%;
+  transform: translate(-50%, 18px);
+  width: 450px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.lobby-container h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 130px;
+}
+.lobby-container .list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 72px auto 0;
+}
+@media screen and (min-width: 850px) {
+  .lobby-container .list-container .wine-list {
+    width: 50%;
+  }
+}
+.lobby-container .list-container .wine-card {
+  background: #885C7E;
+  border-radius: 25px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  height: 440px;
+  box-shadow: 1px 1px 5px rgba(226, 226, 226, 0.178);
+  margin: 14px auto 0;
+}
+.lobby-container .list-container .wine-card:nth-child(1), .lobby-container .list-container .wine-card:nth-child(2) {
+  margin-top: 14px;
+}
+@media screen and (min-width: 850px) {
+  .lobby-container .list-container .wine-card {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .lobby-container .list-container .wine-card {
+    height: 340px;
+  }
+}
+.lobby-container .list-container .wine-card:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: url("../img/card-bg.jpg") center 75%/cover;
+  top: 0;
+  left: 0;
+  opacity: 0.55;
+  border-radius: 0 0 120px 45%/60px;
+}
+.lobby-container .list-container .wine-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 20px 42px;
+}
+.lobby-container .list-container .wine-card .card-header h2 {
+  padding: 0;
+  z-index: 20;
+  font-size: 1.8rem;
+}
+@media screen and (max-width: 550px) {
+  .lobby-container .list-container .wine-card .card-header h2 {
+    font-size: 1.3rem;
+  }
+}
+.lobby-container .list-container .wine-card .card-header i {
+  margin-right: 6px;
+  font-size: 1.3rem;
+  z-index: 20;
+}
+.lobby-container .list-container .container {
+  display: grid;
+  grid-template-columns: 73% 27%;
+}
+.lobby-container .list-container .container .text-container .buttons {
+  display: flex;
+  margin: 24px 0 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+.lobby-container .list-container .container .text-container .buttons h4 {
+  background: #3E0018;
+  border-radius: 20px;
+  padding: 10px 10px;
+  box-shadow: 0 0 4px #333;
+}
+@media screen and (max-width: 550px) {
+  .lobby-container .list-container .container .text-container .buttons h4 {
+    font-size: 0.8rem;
+  }
+}
+.lobby-container .list-container .container .text-container .location {
+  margin: 20px 0 20px;
+}
+.lobby-container .list-container .container .text-container .location i {
+  color: #3E0018;
+  font-size: 1.4rem;
+  margin-right: 6px;
+}
+.lobby-container .list-container .container .text-container .location span {
+  font-size: 1.3rem;
+}
+.lobby-container .list-container .container .text-container p {
+  font-weight: 100;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
+}
+@media screen and (max-width: 550px) {
+  .lobby-container .list-container .container .text-container p {
+    -webkit-line-clamp: 4;
+  }
+}
+.lobby-container .list-container .container img {
+  margin: 0 auto;
+  padding: 20px 0 0 20px;
+  max-height: 300px;
+}
+@media screen and (max-width: 550px) {
+  .lobby-container .list-container .container img {
+    height: 200px;
+  }
+}
+
+.item-anim-enter-active, .item-anim-leave-active {
+  opacity: 1;
+  transition: 0.8s;
+}
+.item-anim-enter, .item-anim-leave-to {
+  opacity: 0;
+  transition: 0.1s;
+}
+
+.admin-nav h1 {
+  text-align: center;
+  margin: 40px auto 0;
+  background: #3E0018;
+  border-radius: 25px;
+  max-width: 300px;
+  padding: 5px 0;
+  box-shadow: 0 0 3px #333;
+}
+
+.admin-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.admin-container .login-container {
+  background: #3E0018;
+  border-radius: 30px;
+  box-shadow: 1px 0 5px rgba(51, 51, 51, 0.267);
+  padding: 12px;
+  margin: 45px 12px 12px;
+}
+.admin-container .login-container h2 {
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+.admin-container .login-container input {
+  margin-bottom: 25px;
+}
+.admin-container .login-container input[type=submit] {
+  background: #885C7E;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #eee;
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  margin: 20px auto 20px;
+  transition: 0.2s;
+}
+.admin-container .login-container input[type=submit]:hover {
+  background: #88002D;
+}
+.admin-container h2 {
+  margin: 40px auto 10px;
+  max-width: 700px;
+  padding-left: 45px;
+}
+.admin-container .wine-card {
+  background: #3E0018;
+  padding: 12px;
+  margin: 25px auto 12px;
+  border-radius: 25px;
+  box-shadow: 1px 0 4px rgba(51, 51, 51, 0.239);
+  max-width: 700px;
+}
+.admin-container .wine-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0px 20px;
+  padding: 0 20px;
+}
+.admin-container .wine-card .header h3 {
+  font-size: 2rem;
+  width: 80%;
+}
+.admin-container .wine-card .header i {
+  font-size: 1.5rem;
+}
+.admin-container .wine-card .container {
+  display: grid;
+  grid-template-columns: 72% 28%;
+}
+.admin-container .wine-card .container .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.admin-container .wine-card .container .buttons h4 {
+  background: #88002D;
+  border-radius: 15px;
+  padding: 4px 8px;
+}
+.admin-container .wine-card .container p {
+  margin-top: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 12;
+  overflow: hidden;
+  margin-right: 10px;
+}
+@media screen and (max-width: 600px) {
+  .admin-container .wine-card .container p {
+    -webkit-line-clamp: 9;
+  }
+}
+.admin-container .wine-card .container img {
+  margin: 0 auto;
+}
+
+.create-container {
+  background: #3E0018;
+  border-radius: 20px;
+  box-shadow: 1px 0 4px rgba(51, 51, 51, 0.192);
+  padding: 12px;
+  margin: 12px auto;
+  max-width: 850px;
+}
+.create-container h1 {
+  text-align: center;
+}
+.create-container input,
+.create-container textarea,
+.create-container select {
+  margin: 8px 0 16px;
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 9px;
+  font-family: "font-1", sans-serif;
+  width: 100%;
+  font-size: 1rem;
+  resize: none;
+}
+.create-container form {
+  margin: 10px 0;
+}
+.create-container form .create-btn {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 320px;
+}
+.create-container form .create-btn input[type=submit] {
+  background-color: #885C7E;
+  color: #eee;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.create-container form .create-btn input[type=submit]:hover {
+  background: #88002D;
+}
+
+.update-container {
+  padding: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.update-container input,
+.update-container textarea,
+.update-container select {
+  margin: 8px 0 16px;
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 9px;
+  font-family: "font-1", sans-serif;
+  width: 100%;
+  font-size: 1rem;
+}
+.update-container h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.update-container .update-search {
+  background: #885C7E;
+  border-radius: 20px;
+  padding: 12px 12px 3px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.update-container .update-search input,
+.update-container .update-search select {
+  margin: 3px 0 12px;
+}
+.update-container .update-search input[type=submit] {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.update-container .update-search input[type=submit]:hover {
+  background: #3E0018;
+  color: #eee;
+}
+.update-container .update-list {
+  margin: 24px 0px;
+  background: #3E0018;
+  border-radius: 30px;
+  padding: 12px;
+}
+.update-container .update-list .header {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  border-bottom: 4px solid #885C7E;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  font-size: 1.4rem;
+}
+.update-container .update-list .wine {
+  display: grid;
+  grid-template-columns: 65% 22% 6% 1% 6%;
+  position: relative;
+}
+.update-container .update-list .wine h2 {
+  font-size: 0.9rem;
+}
+@media screen and (min-width: 650px) {
+  .update-container .update-list .wine h2 {
+    font-size: 1.1rem;
+  }
+}
+.update-container .update-list .wine input[type=checkbox] {
+  width: 35px;
+  height: 35px;
+  transform: translate(-30px, -16px);
+  opacity: 0;
+  cursor: pointer;
+}
+@media screen and (min-width: 442px) {
+  .update-container .update-list .wine input[type=checkbox] {
+    transform: translate(-40px, -16px);
+  }
+}
+@media screen and (min-width: 740px) {
+  .update-container .update-list .wine input[type=checkbox] {
+    transform: translate(-56px, -16px);
+  }
+}
+@media screen and (min-width: 1050px) {
+  .update-container .update-list .wine input[type=checkbox] {
+    transform: translate(-70px, -16px);
+  }
+}
+.update-container .update-list .wine .fa-pen {
+  transform: translateY(2px);
+}
+.update-container .update-list .update-checkbox:checked ~ .update {
+  visibility: visible;
+  position: unset;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.update-container .update-list .update {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: 0.3s ease;
+  transform-origin: top;
+  background: #885C7E;
+  padding: 12px;
+  border-radius: 25px;
+  margin-bottom: 35px;
+}
+.update-container .update-list .update h2 {
+  text-align: center;
+  margin: 10px 0;
+  background: #3E0018;
+  border-radius: 35px;
+  padding: 12px 0;
+}
+.update-container .update-list .update .submit-btn {
+  margin: 0 auto;
+  text-align: center;
+}
+.update-container .update-list .update input,
+.update-container .update-list .update select {
+  color: #6d6b6b;
+}
+.update-container .update-list .update input[type=submit] {
+  background: #3E0018;
+  color: #eee;
+  max-width: 290px;
+}
+
+#modalDelete {
+  opacity: 0;
+  transform: scaleY(0);
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  background: #885C7E;
+  padding: 30px 30px;
+  border-radius: 30px;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(51, 51, 51, 0.561);
+}
+#modalDelete:target {
+  opacity: 1;
+  visibility: visible;
+  position: fixed;
+  transform: scaleY(1) translate(-50%, -50%);
+}
+#modalDelete .button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0 0;
+  padding: 0 40px;
+}
+#modalDelete .button-container a {
+  background: #88002D;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+#modalDelete .button-container a:hover {
+  background: #3E0018;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  max-width: 1150px;
+  position: relative;
+}
+nav img {
+  width: 60%;
+  cursor: pointer;
+  margin-left: 10px;
+}
+nav ul {
+  position: relative;
+}
+nav ul i {
+  font-size: 3.2rem;
+  margin-right: 20px;
+}
+nav #toggle {
+  position: absolute;
+  right: 20px;
+  width: 65px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+nav #toggle:hover ~ .hamburger {
+  transform: scale(1.1);
+}
+nav .hamburger {
+  margin: -5px 20px 0 0;
+  transition: 0.5s;
+}
+nav .hamburger span {
+  width: 60px;
+  height: 6px;
+  border-radius: 5px;
+  background: #eee;
+  display: block;
+  margin-top: 10px;
+  transition: 0.5s ease;
+}
+nav #toggle:checked ~ .hamburger {
+  position: relative;
+}
+nav #toggle:checked ~ .hamburger span {
+  position: absolute;
+  top: 16px;
+  right: 0px;
+}
+nav #toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: rotate(45deg);
+}
+nav #toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+nav #toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+nav .hamburger-menu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+  font-size: 2rem;
+  width: 100%;
+  top: 75px;
+  cursor: pointer;
+  z-index: 4;
+  line-height: 100px;
+}
+nav .hamburger-menu li {
+  text-align: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  background: #88002D;
+  width: 100%;
+}
+nav .hamburger-menu li:hover {
+  background: #3E0018;
+}
+nav .hamburger-menu li:nth-child(1) {
+  transform: translateY(0);
+  transition: 0.6s ease;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 20px 10px rgba(51, 51, 51, 0.3);
+}
+nav .hamburger-menu li:nth-child(2) {
+  transform: translateY(-132px);
+  transition: 0.3s ease;
+}
+nav .hamburger-menu li:nth-child(1):before {
+  content: "";
+  background: #eee;
+  height: 1px;
+  width: 85%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+}
+nav .hamburger-menu a {
+  display: inline-block;
+  width: 100%;
+}
+nav #toggle:checked ~ .hamburger-menu {
+  visibility: visible;
+  opacity: 1;
+}
+nav #toggle:checked ~ .hamburger-menu li:nth-child(1) {
+  transform: translateY(90px);
+}
+nav #toggle:checked ~ .hamburger-menu li:nth-child(2) {
+  transform: translateY(-110px);
+}
+
+.admin-nav {
+  margin: 30px 0;
+}
+.admin-nav h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.admin-nav ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.admin-nav ul li {
+  background: #885C7E;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(51, 51, 51, 0.2);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.css.map */
